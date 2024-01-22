@@ -68,7 +68,7 @@ header {
   margin-bottom: 5.5rem;
 }
 
-header .input-wrapper {
+.input-wrapper {
   width: 100%;
   max-width: 40rem;
   display: flex;
@@ -124,26 +124,27 @@ header .input-wrapper {
 
 #table-wrapper {
   width: 100%;
-  overflow: hidden;
+  overflow-y: hidden;
   border-radius: 0.75rem;
   border: 1px solid var(--border-table);
 }
 
 #thead {
   display: flex;
-  width: 100%;
   background: var(--bg-thead);
 }
 
 table {
-  text-align: left;
   width: 100%;
+  text-align: left;
   border-collapse: collapse;
   border-top: none;
 }
 
 #tbody {
+  width: 100%;
   overflow: auto;
+  overflow-x: hidden;
   max-height: 30rem;
 }
 
@@ -214,6 +215,7 @@ td.user {
 }
 
 #no-favorites {
+  padding: 2rem;
   height: 20rem;
   display: none;
   align-items: center;
@@ -259,4 +261,43 @@ td.user {
 /* handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--bg-scrollbar-thumb-hover);
+}
+
+@media (max-width: 820px) {
+  :root {
+    font-size: 90%;
+  }
+  #app {
+    margin: 3rem auto 1rem;
+  }
+  header {
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+  }
+  #tbody {
+    max-height: 30rem;
+  }
+  #no-favorites {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
+@media (max-width: 790px) {
+  #tbody {
+    width: max-content;
+  }
+  #thead {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 540px) {
+  .input-wrapper {
+    flex-direction: column;
+    height: 6.5rem;
+  }
+  .input-wrapper button {
+    width: 100%;
+  }
 }
