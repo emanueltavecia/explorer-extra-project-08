@@ -1,4 +1,4 @@
-# GitFav
+# ![GitFav Logo](./.github/logo.svg)
 
 Challenge developed on Rocketseat's Explorer course
 
