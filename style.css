@@ -216,7 +216,6 @@ td.user {
 }
 
 #no-favorites {
-  width: calc(100vw - 5rem);
   padding: 2rem;
   height: 22rem;
   display: none;
