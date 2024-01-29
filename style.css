@@ -43,7 +43,7 @@ body * {
 }
 
 #app {
-  max-width: 90rem;
+  max-width: 80rem;
   margin: 7rem auto;
   padding: 0 2rem;
 }
